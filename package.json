@@ -1,0 +1,24 @@
+{
+  "name": "project-2",
+  "version": "1.0.0",
+  "description": "project2",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ../**/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "project2-fullstack"
+  },
+  "author": "",
+  "license": "ISC",
+  "directories": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "eslint": "^6.8.0",
+    "jest": "^25.1.0"
+  },
+  "keywords": []
+}
