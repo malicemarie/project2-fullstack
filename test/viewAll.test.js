@@ -25,6 +25,13 @@ describe("ViewAll", () => {
 
     it("should throw an error if provided no arguments", () => {
       const callback = () => new ViewAll();
+
+      expect(callback).toThrow();
     });
+
+    it("should throw an error");
+    //ingredients
+    //category
+    //serving size
   });
 });
