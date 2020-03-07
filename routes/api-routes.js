@@ -25,7 +25,9 @@ module.exports = app => {
   app.post(`/api/recipes`, (req, res) => {
     db.Recipe.create({
       title: req.body.title,
-      ingredients: req.body.complete,
+      amount: req.body.amount,
+      measurement: req.body.measurement,
+      ingredientname: req.body.ingredientname,
       category: req.body.category,
       servingsize: req.body.servingsize
     })
@@ -53,7 +55,9 @@ module.exports = app => {
     db.Recipe.update(
       {
         title: req.body.title,
-        ingredients: req.body.complete,
+        amount: req.body.amount,
+        measurement: req.body.measurement,
+        ingredientname: req.body.ingredientname,
         category: req.body.category,
         servingsize: req.body.servingsize
       },
