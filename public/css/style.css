@@ -18,6 +18,7 @@ form#cms {
 
 .jumbotron {
   background: rgba(235, 219, 180, 0.7);
+  margin: 20px;
 }
 
 body {

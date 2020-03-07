@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Recipes</title>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/flatly/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="./css/style.css"
+      media="screen"
+      title="no title"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="jumbotron">
+          <h1 class="display-4">Recipe Box</h1>
+          <hr class="my-4" />
+          <button type="add-new" href="/recipes" class="btn view-all btn-lg">
+            Add New Recipe
+          </button>
+
+          <div class="row">
+            <div class="recipe-card">
+              <div class="recipe-card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Recipe Title</h5>
+                  <p class="card-text">Ingredients</p>
+                  <a href="/recipes/:category" class="card-link">Category</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
