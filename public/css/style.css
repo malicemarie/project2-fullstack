@@ -1,5 +1,11 @@
 button.submit {
   float: right;
+  background-color: #777777;
+}
+
+button.view-all button.login {
+  float: left;
+  background-color: #777777;
 }
 
 form#cms {
@@ -10,8 +16,11 @@ form#cms {
   resize: none;
 }
 
-.card-header button.delete,
-button.edit {
-  float: right;
-  margin: 5px;
+.jumbotron {
+  background: rgba(235, 219, 180, 0.7);
+}
+
+body {
+  background-image: url("../img/xv.png");
+  font-family: "Courier New", Courier, monospace;
 }
