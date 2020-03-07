@@ -8,7 +8,7 @@ describe(`jest test`, () => {
   });
 });
 
-describe(viewAllRecipes, () => {
+describe("viewAllRecipes", () => {
   it("should display all the recipes in the table", () => {
     expect().toBe();
   });
@@ -17,7 +17,7 @@ describe(viewAllRecipes, () => {
   });
 });
 
-describe(viewRecipeByCategory, () => {
+describe("viewRecipeByCategory", () => {
   it("should display all the recipes in a given category", () => {
     expect().toBe();
   });
