@@ -31,7 +31,7 @@ describe("ViewAll", () => {
       ]);
     });
 
-    it("should create an object with a title, ingredients, category, and serving size if provided valid arguments", () => {
+    it("should create an object with a category", () => {
       const viewAll = new ViewAll(
         "Toast",
         ["bread", "butter", "jam", "peanut butter"],
@@ -39,18 +39,10 @@ describe("ViewAll", () => {
         4
       );
 
-      expect(viewAll.title).toEqual("Toast");
-      expect(viewAll.ingredients).toEqual([
-        "bread",
-        "butter",
-        "jam",
-        "peanut butter"
-      ]);
       expect(viewAll.category).toEqual("breakfast");
-      expect(viewAll.servingsize).toEqual(4);
     });
 
-    it("should create an object with a title, ingredients, category, and serving size if provided valid arguments", () => {
+    it("should create an object with a serving size", () => {
       const viewAll = new ViewAll(
         "Toast",
         ["bread", "butter", "jam", "peanut butter"],
@@ -58,22 +50,10 @@ describe("ViewAll", () => {
         4
       );
 
-      expect(viewAll.title).toEqual("Toast");
-      expect(viewAll.ingredients).toEqual([
-        "bread",
-        "butter",
-        "jam",
-        "peanut butter"
-      ]);
-      expect(viewAll.category).toEqual("breakfast");
       expect(viewAll.servingsize).toEqual(4);
     });
 
-    it("should throw an error if provided no arguments", () => {
-      const callback = () => new ViewAll();
-
-      expect(callback).toThrow();
-    });
+    //do we need to have specific tests to throw errors for each part of the view all (title, ingredients, category, serving size)?
 
     //it("should throw an error");
     //ingredients
