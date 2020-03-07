@@ -1,10 +1,9 @@
 "use strict";
 
-const ViewAll = require("../viewAll");
+const ViewAll = require("../controllers/ViewAll");
 
 describe("ViewAll", () => {
   describe("Initialization", () => {
-    
     it("should create an object with a title", () => {
       const viewAll = new ViewAll(
         "Toast",
@@ -14,9 +13,7 @@ describe("ViewAll", () => {
       );
 
       expect(viewAll.title).toEqual("Toast");
-      
     });
-
 
     it("should create an object with ingredients", () => {
       const viewAll = new ViewAll(
@@ -26,16 +23,13 @@ describe("ViewAll", () => {
         4
       );
 
-     
       expect(viewAll.ingredients).toEqual([
         "bread",
         "butter",
         "jam",
         "peanut butter"
       ]);
-      
     });
-
 
     it("should create an object with a title, ingredients, category, and serving size if provided valid arguments", () => {
       const viewAll = new ViewAll(
@@ -55,7 +49,6 @@ describe("ViewAll", () => {
       expect(viewAll.category).toEqual("breakfast");
       expect(viewAll.servingsize).toEqual(4);
     });
-
 
     it("should create an object with a title, ingredients, category, and serving size if provided valid arguments", () => {
       const viewAll = new ViewAll(
@@ -82,7 +75,7 @@ describe("ViewAll", () => {
       expect(callback).toThrow();
     });
 
-    it("should throw an error");
+    //it("should throw an error");
     //ingredients
     //category
     //serving size
