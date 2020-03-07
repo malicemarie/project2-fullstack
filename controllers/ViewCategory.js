@@ -1,8 +1,8 @@
-class ViewAll {
-  constructor(title, ingredients, category, servingsize) {
+class ViewCategory {
+  constructor(title, ingredients, servingsize) {
     if (typeof title !== "string" || !title.trim().length) {
       throw new Error(
-        "Expected parameter 'title', 'ingredients', 'category' to be a non-empty string"
+        "Expected parameter 'title', 'ingredients' to be a non-empty string"
       );
     }
 
@@ -17,9 +17,8 @@ class ViewAll {
     }
     this.title = title;
     this.ingredients = ingredients;
-    this.category = category;
     this.servingsize = servingsize;
   }
 }
 
-module.exports = ViewAll;
+module.exports = ViewCategory;
