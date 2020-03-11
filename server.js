@@ -25,7 +25,7 @@ app.use(express.static(`public`));
 
 // Require routes file
 require(`./routes/api-routes.js`)(app);
-require(`./routes/html-routes.js`)(app);
+//require(`./routes/html-routes.js`)(app);
 
 //start server via sequelize
 db.sequelize.sync({ force: true }).then(() => {
