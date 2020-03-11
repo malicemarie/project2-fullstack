@@ -52,12 +52,5 @@ describe("ViewAll", () => {
 
       expect(viewAll.servingsize).toEqual(4);
     });
-
-    //do we need to have specific tests to throw errors for each part of the view all (title, ingredients, category, serving size)?
-
-    //it("should throw an error");
-    //ingredients
-    //category
-    //serving size
   });
 });
