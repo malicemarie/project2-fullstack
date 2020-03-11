@@ -25,3 +25,7 @@ body {
   background-image: url("../img/xv.png");
   font-family: "Courier New", Courier, monospace;
 }
+
+.display-4 {
+  font-weight: bold;
+}
