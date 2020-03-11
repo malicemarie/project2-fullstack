@@ -15,7 +15,7 @@ app.use(express.json());
 //Handlebars
 app.engine(
   "handlebars",
-  expressHandlebars({ defaultLayout: "main" })
+  expressHandlebars({ defaultLayout: "main" }) // the default layouts is "views/layouts" so we can omit that option
 );
 
 app.set("view engine", "handlebars");
