@@ -50,7 +50,10 @@
                       class="form-control"
                       id="title"
                       value="Give your recipe a name"
+                      onfocus="this.value = this.value=='Give your recipe a name'?'':this.value;"
+                      onblur="this.value = this.value==''?'Give your recipe a name':this.value;"
                     />
+
                     <br />
                     <label for="body">Ingredients:</label>
                     <textarea
