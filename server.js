@@ -13,10 +13,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 //Handlebars
-app.engine(
-  "handlebars",
-  expressHandlebars({ defaultLayout: "main", layoutsDir: __dirname + "/views" })
-);
+app.engine("handlebars", expressHandlebars({ defaultLayout: "main" }));
 
 app.set("view engine", "handlebars");
 
