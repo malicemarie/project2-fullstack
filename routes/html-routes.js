@@ -2,10 +2,10 @@
 
 module.exports = app => {
   app.get(`/`, (req, res) => {
-    res.render("index", { layout: "main", template: "index" });
+    res.render("index", { template: "index" });
   });
 
-  app.get(`/api/recipes`, (req, res) => {
-    res.render("viewall", { layout: "main", template: "viewall" });
+  app.get(`/recipes`, (req, res) => {
+    res.render("viewall", { template: "viewall" });
   });
 };
