@@ -1,14 +1,4 @@
-describe(`jest test`, () => {
-  it(`should pass`, () => {
-    expect(1 + 2).toEqual(3);
-  });
-
-  it("should fail", () => {
-    expect("1" + "1").toEqual(2);
-  });
-});
-
-describe(viewAllRecipes, () => {
+describe("viewAllRecipes", () => {
   it("should display all the recipes in the table", () => {
     expect().toBe();
   });
@@ -17,7 +7,7 @@ describe(viewAllRecipes, () => {
   });
 });
 
-describe(viewRecipeByCategory, () => {
+describe("viewRecipeByCategory", () => {
   it("should display all the recipes in a given category", () => {
     expect().toBe();
   });
