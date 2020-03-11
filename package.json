@@ -4,6 +4,7 @@
   "description": "project2",
   "main": "index.js",
   "scripts": {
+    "watch": "nodemon server",
     "test": "jest",
     "lint": "eslint ../**/*.js"
   },

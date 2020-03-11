@@ -2,10 +2,15 @@
 
 module.exports = app => {
   app.get(`/`, (req, res) => {
-    res.render("index", { template: "index" });
+
+    // the default layout is already set to "main" in server.js
+    // we can omit that option
+    res.render("index");
   });
 
   app.get(`/recipes`, (req, res) => {
-    res.render("viewall", { template: "viewall" });
+    // including dummy data so it renders something
+    res.render("viewall", { recipes: [{ title: 'pizza', ingredientname: 'cheese', category: 'food' }] });
+
+    res.render("index", { template: "index" });
   });
-};
