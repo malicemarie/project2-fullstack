@@ -12,5 +12,3 @@ module.exports = app => {
     // including dummy data so it renders something
     res.render("viewall", { recipes: [{ title: 'pizza', ingredientname: 'cheese', category: 'food' }] });
 
-    res.render("index", { template: "index" });
-  });
