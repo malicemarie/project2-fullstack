@@ -9,15 +9,26 @@
             </button>
 
             <div class="row">
-                <div class="recipe-card">
-                    <div class="recipe-card" style="width: 18rem;">
-                        <div class="card-body">
-                            <h5 class="card-title">{{title}}</h5>
-                            <p class="card-text">{{ingredientname}}</p>
-                            <a href="/recipes/{{category}}" class="card-link">{{category}}</a>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            front card
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="recipe-card">
+                                <div class="recipe-card" style="width: 18rem;">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{title}}</h5>
+                                        <p class="card-text">{{ingredientname}}</p>
+                                        <a href="/recipes/{{category}}" class="card-link">{{category}}</a>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
