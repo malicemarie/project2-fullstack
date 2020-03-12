@@ -26,4 +26,12 @@ $(document).ready(() => {
     ingredients: ingredientsInput.val().trim(),
     category: categorySelect.val()
   };
+
+  submitRecipe(newRecipe);
+
+  function submitRecipe(recipe) {
+    $.post(`/api/recipes`, recipe, () => {
+      window.location.href = `/viewall`;
+    });
+  }
 });
