@@ -4,10 +4,28 @@ const db = require(`../models`);
 
 module.exports = app => {
   // GET route for getting all of the recipes
-  app.get(`/api/recipes`, (req, res) => {
+  app.get(`/api/viewall`, (req, res) => {
     db.Recipe.findAll({}).then(dbRecipe => {
       res.json(dbRecipe);
     });
+  });
+
+  // POST route for saving a new recipe
+  app.post(`/api/recipes`, (req, res) => {
+    db.Recipe.create({
+      title: req.body.title,
+      ingredientname: req.body.ingredientname,
+      category: req.body.category
+    })
+
+      .then(dbRecipe => {
+        console.log("added new recipe" + dbRecipe);
+        res.json(dbRecipe);
+      })
+      .catch(err => {
+        console.log("oops nope db error");
+        res.json(err);
+      });
   });
 
   //GET route for getting recipes by Category
@@ -19,22 +37,6 @@ module.exports = app => {
     }).then(dbRecipe => {
       res.json(dbRecipe);
     });
-  });
-
-  // POST route for saving a new recipe
-  app.post(`/api/recipes`, (req, res) => {
-    db.Recipe.create({
-      title: req.body.title,
-      ingredientname: req.body.ingredientname,
-      category: req.body.category,
-      servingsize: req.body.servingsize
-    })
-      .then(dbRecipe => {
-        res.json(dbRecipe);
-      })
-      .catch(err => {
-        res.json(err);
-      });
   });
 
   // DELETE route for deleting recipes.

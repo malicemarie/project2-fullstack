@@ -7,35 +7,39 @@ $(document).ready(() => {
   const categorySelect = $("#category");
   const submitBtn = $("#submit-btn");
 
-  $(submitBtn).on("submit", handleFormSubmit);
-  console.log("button click");
+  submitBtn.on("click", handleFormSubmit);
 
   function handleFormSubmit(event) {
     event.preventDefault();
+    console.log("button click");
+
+    const newRecipe = {
+      title: titleInput.val().trim(),
+      ingredients: ingredientsInput.val().trim(),
+      category: categorySelect.val()
+    };
+    // console.log("NEWWWWWW RECIPEEEEEE");
+    // console.log(newRecipe);
     if (
-      !titleInput.val().trim() ||
-      !ingredientsInput.val().trim() ||
-      !categorySelect.val()
+      titleInput.val().trim() &&
+      ingredientsInput.val().trim() &&
+      categorySelect.val()
     ) {
-      return;
+      console.log("submitting recipe");
+      submitRecipe(newRecipe);
+    } else {
+      window.alert("please include all recipe elements!");
     }
   }
-  const newRecipe = {
-    title: titleInput.val().trim(),
-    ingredients: ingredientsInput.val().trim(),
-    category: categorySelect.val()
-  };
-  console.log(newRecipe);
 
-  submitRecipe(newRecipe);
-
-  function submitRecipe() {
+  function submitRecipe(newRecipe) {
     $.ajax({
       method: "POST",
-      url: "/api/recipes"
+      url: "/api/recipes",
+      data: newRecipe
     }).then(() => {
       console.log("recipe Submitted successfully!");
-      //   window.location.href = `/viewall`;
+      window.location.href = `/viewall`;
     });
   }
 
@@ -43,18 +47,26 @@ $(document).ready(() => {
 
   const viewAllBtn = $("#viewall-btn");
 
-  $(viewAllBtn).on("submit", viewAllRecipes);
-
-  console.log("button click");
+  viewAllBtn.on("submit", viewAllRecipes);
 
   function viewAllRecipes(event) {
+    console.log("button click view all recipes");
     event.preventDefault();
     $.ajax({
       method: "GET",
       url: "/recipes"
     }).then(() => {
       console.log("view all recipes success");
-      window.location.href = "/";
+      window.location.href = "/viewall";
     });
+  }
+
+  const addNewBtn = $("#addnew-btn");
+
+  addNewBtn.on("click", goToIndex);
+
+  function goToIndex(event) {
+    event.preventDefault();
+    window.location.href = "/";
   }
 });
