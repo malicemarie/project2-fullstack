@@ -5,6 +5,7 @@ $(document).ready(() => {
   const titleInput = $("#title");
   const ingredientsInput = $("#ingredients");
   const categorySelect = $("#category");
+  const servingSize = $("#servingsize");
   const submitBtn = $("#submit-btn");
 
   submitBtn.on("click", handleFormSubmit);
@@ -14,16 +15,17 @@ $(document).ready(() => {
     console.log("button click");
 
     const newRecipe = {
-      title: titleInput.val().trim(),
-      ingredients: ingredientsInput.val().trim(),
-      category: categorySelect.val()
+      title: titleInput.val(),
+      ingredients: ingredientsInput.val(),
+      category: categorySelect.val(),
+      servingsize: servingSize.val()
     };
-    // console.log("NEWWWWWW RECIPEEEEEE");
-    // console.log(newRecipe);
+
     if (
       titleInput.val().trim() &&
       ingredientsInput.val().trim() &&
-      categorySelect.val()
+      categorySelect.val() &&
+      servingSize.val()
     ) {
       console.log("submitting recipe");
       submitRecipe(newRecipe);

@@ -5,13 +5,14 @@ const db = require(`../models`);
 module.exports = app => {
   // GET route for getting all of the recipes
   app.get(`/viewall`, async (req, res) => {
-    let allRecipes = await db.recipe.findAll({});
+    let allRecipes = await db.Recipe.findAll({});
     let newRecipes = [];
     allRecipes.forEach(recipe => {
       newRecipes.push({
         title: recipe.title,
         ingredientname: recipe.ingredients,
-        category: recipe.category
+        category: recipe.category,
+        servingsize: recipe.servingsize
       });
     });
     res.render("viewall", {
@@ -21,34 +22,20 @@ module.exports = app => {
 
   // POST route for saving a new recipe
   app.post(`/api/recipes`, (req, res) => {
-    db.recipe
-      .create({
-        title: req.body.title,
-        ingredientname: req.body.ingredients,
-        category: req.body.category,
-        servingsize: req.body.servingsize
-      })
+    db.Recipe.create({
+      title: req.body.title,
+      ingredientname: req.body.ingredients,
+      category: req.body.category,
+      servingsize: req.body.servingsize
+    })
 
-      .then(dbrecipe => {
-        console.log("added new recipe" + dbrecipe);
-        res.json(dbrecipe);
+      .then(dbRecipe => {
+        console.log("added new recipe" + dbRecipe);
+        res.json(dbRecipe);
       })
       .catch(err => {
         console.log("oops nope db error");
         res.json(err);
-      });
-  });
-
-  //GET route for getting recipes by Category
-  app.get(`/api/recipes/:category`, (req, res) => {
-    db.recipe
-      .findAll({
-        where: {
-          category: req.params.category
-        }
-      })
-      .then(dbrecipe => {
-        res.json(dbrecipe);
       });
   });
 
@@ -60,9 +47,20 @@ module.exports = app => {
           id: req.params.id
         }
       })
-      .then(dbrecipe => {
-        res.json(dbrecipe);
+      .then(dbRecipe => {
+        res.json(dbRecipe);
       });
+  });
+
+  //GET route for getting recipes by Category
+  app.get(`/api/recipes/:category`, (req, res) => {
+    db.Recipe.findAll({
+      where: {
+        category: req.params.category
+      }
+    }).then(dbRecipe => {
+      res.json(dbRecipe);
+    });
   });
 
   // PUT route for updating recipes.
@@ -80,8 +78,8 @@ module.exports = app => {
   //       }
   //     }
   //   )
-  //     .then(dbrecipe => {
-  //       res.json(dbrecipe);
+  //     .then(dbRecipe => {
+  //       res.json(dbRecipe);
   //     })
   //     .catch(err => {
   //       res.json(err);

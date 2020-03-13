@@ -11,9 +11,11 @@
                 <div class="recipe-card">
                     <div class="recipe-card" style="width: 18rem;">
                         <div class="card-body">
-                            <h5 class="card-title">{{title}}</h5>
-                            <p class="card-text">{{ingredients}}</p>
-                            <a href="/viewall/{{category}} " class="card-link">{{category}}</a>
+                            <h5 class="card-title recipe-title">{{title}}</h5>
+                            {{#each ingredientname}}
+                            <ul class="card-text ingredient-list">{{ingredientname}}</ul>
+                            {{/each}}
+                            <a href="/viewall" class="card-link">{{category}}</a>
                         </div>
                     </div>
                 </div>

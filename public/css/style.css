@@ -3,12 +3,6 @@ button.submit {
   float: right;
   background-color: #777777;
 }
-/* 
-.row1 {
-  display: flex;
-  justify-content: left;
-  align-items: flex-start;
-} */
 
 .row {
   margin-top: 20px;
@@ -21,7 +15,18 @@ button.submit {
   float: left;
 }
 
+.view-all {
+  float: left;
+  background-color: white;
+  color: #777777;
+  float: left;
+}
+
 .viewallbtn:hover {
+  color: white;
+  background-color: #777777;
+}
+.view-all:hover {
   color: white;
   background-color: #777777;
 }
@@ -45,5 +50,18 @@ body {
 }
 
 .display-4 {
+  font-weight: bold;
+}
+
+.card-link {
+  color: white;
+}
+
+.card-link:hover {
+  color: #777777;
+}
+
+.recipe-title {
+  font-size: 16;
   font-weight: bold;
 }
