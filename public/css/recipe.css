@@ -1,3 +1,8 @@
+@font-face {
+  font-family: Old Typewriter2;
+  src: url("../css/assets/font/OldTypewriter2.ttf");
+}
+
 .jumbotron {
   background: rgba(235, 219, 180, 0.7);
   background-image: linear-gradient(
@@ -25,7 +30,7 @@
 }
 
 .flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
+  transform: rotateX(180deg);
 }
 
 .flip-card-front,
@@ -38,11 +43,11 @@
 
 .flip-card-front {
   background-image: url("../css/assets/img/old-paper-2-1189706-639x462.jpg");
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Old Typewriter2";
 }
 
 .flip-card-back {
   background-image: url("../css/assets/img/old-paper-2-1189706-639x462.jpg");
-  font-family: "Courier New", Courier, monospace;
-  transform: rotateY(180deg);
+  font-family: "Old Typewriter2";
+  transform: rotateX(180deg);
 }
