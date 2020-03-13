@@ -27,7 +27,7 @@
           </p>
           <hr class="my-4" />
           <p>Let's Get Started!</p>
-          <button type="viewall" class="btn view-all btn-lg">
+          <button type="viewall" class="btn view-all btn-lg" id="viewall-btn">
             View All Recipes
           </button>
           <button type="viewall" class="btn login btn-lg">
@@ -53,7 +53,6 @@
                       onfocus="this.value = this.value=='Give your recipe a name'?'':this.value;"
                       onblur="this.value = this.value==''?'Give your recipe a name':this.value;"
                     />
-
                     <br />
                     <label for="body">Ingredients:</label>
                     <textarea
