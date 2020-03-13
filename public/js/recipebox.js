@@ -34,9 +34,12 @@ $(document).ready(() => {
     submitRecipe(newRecipe);
   }
 
-  function submitRecipe(recipe) {
-    $.post(`/api/recipes`, recipe, () => {
-      window.location.href = `/recipes`;
+  function submitRecipe() {
+    $.ajax({
+      method: "POST",
+      url: "/api/recipes"
+    }).then(() => {
+      window.location.href = `/viewall`;
     });
   }
 });

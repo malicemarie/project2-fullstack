@@ -49,25 +49,25 @@ module.exports = app => {
   });
 
   // PUT route for updating recipes.
-  app.put(`/api/recipes`, (req, res) => {
-    db.Recipe.update(
-      {
-        title: req.body.title,
-        ingredientname: req.body.ingredientname,
-        category: req.body.category,
-        servingsize: req.body.servingsize
-      },
-      {
-        where: {
-          id: req.body.id
-        }
-      }
-    )
-      .then(dbRecipe => {
-        res.json(dbRecipe);
-      })
-      .catch(err => {
-        res.json(err);
-      });
-  });
+  // app.put(`/api/recipes`, (req, res) => {
+  //   db.Recipe.update(
+  //     {
+  //       title: req.body.title,
+  //       ingredientname: req.body.ingredientname,
+  //       category: req.body.category,
+  //       servingsize: req.body.servingsize
+  //     },
+  //     {
+  //       where: {
+  //         id: req.body.id
+  //       }
+  //     }
+  //   )
+  //     .then(dbRecipe => {
+  //       res.json(dbRecipe);
+  //     })
+  //     .catch(err => {
+  //       res.json(err);
+  //     });
+  // });
 };
