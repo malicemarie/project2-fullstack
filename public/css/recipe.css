@@ -27,12 +27,12 @@
 }
 
 .flip-card-front {
-  background-color: rgb(187, 129, 129);
+  background-image: url("../img/old-paper-2-1189706-639x462.jpg");
   font-family: "Courier New", Courier, monospace;
 }
 
 .flip-card-back {
-  background-image: url("../img/xv.png");
+  background-image: url("../img/old-paper-2-1189706-639x462.jpg");
   font-family: "Courier New", Courier, monospace;
   transform: rotateY(180deg);
 }
