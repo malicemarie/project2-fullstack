@@ -7,7 +7,7 @@ module.exports = app => {
     res.render("index");
   });
 
-  app.get(`/recipes`, (req, res) => {
+  app.get(`/viewall`, (req, res) => {
     // including dummy data so it renders something
     res.render("viewall", {
       recipes: [{ title: "pizza", ingredientname: "cheese", category: "food" }]
