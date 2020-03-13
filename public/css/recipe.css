@@ -1,3 +1,13 @@
+.jumbotron {
+  background: rgba(235, 219, 180, 0.7);
+  background-image: linear-gradient(
+    to bottom,
+    rgba(235, 219, 180, 0.7),
+    rgba(167, 116, 116, 0.945)
+  );
+
+  margin: 20px;
+}
 .flip-card {
   background-color: transparent;
   width: 300px;
