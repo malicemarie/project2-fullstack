@@ -5,8 +5,9 @@
             <h1 class="display-4">Recipe Box</h1>
             <hr class="my-4" />
             <button type="add-new" href="/recipes" class="btn view-all btn-lg">
-                Add New Recipe
+                Add New Recipe <i class="fas fa-utensils"></i>
             </button>
+
 
             <div class="row">
                 <div class="flip-card">
@@ -18,7 +19,7 @@
                             <div class="recipe-card">
                                 <div class="recipe-card" style="width: 18rem;">
                                     <div class="card-body">
-                                        <h5 class="card-title">{{title}}</h5>
+                                        <h5 class="card-title" style="letter-spacing: inherit;">{{title}}</h5>
                                         <p class="card-text">{{ingredientname}}</p>
                                         <a href="/recipes/{{category}}" class="card-link">{{category}}</a>
                                     </div>
