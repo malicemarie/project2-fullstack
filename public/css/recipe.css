@@ -27,12 +27,12 @@
 }
 
 .flip-card-front {
-  background-color: chartreuse;
-  color: black;
+  background-color: rgb(187, 129, 129);
+  font-family: "Courier New", Courier, monospace;
 }
 
 .flip-card-back {
-  background-color: darkblue;
-  color: floralwhite;
+  background-image: url("../img/xv.png");
+  font-family: "Courier New", Courier, monospace;
   transform: rotateY(180deg);
 }
