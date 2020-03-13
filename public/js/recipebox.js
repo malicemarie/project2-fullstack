@@ -48,7 +48,7 @@ function submitRecipe() {
 
 const viewAllBtn = $("#viewall-btn");
 
-$(submitBtn).on("submit", viewAllRecipes);
+$(viewAllBtn).on("submit", viewAllRecipes);
 let recipesId;
 console.log("button click");
 
@@ -58,7 +58,7 @@ function viewAllRecipes(event) {
     method: "GET",
     url: "api/viewall"
   }).then(() => {
-    console.log("view all recips success");
+    console.log("view all recipes success");
     window.location.href = "/viewall";
   });
 }

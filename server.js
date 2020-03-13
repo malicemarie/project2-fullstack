@@ -4,7 +4,7 @@ const express = require(`express`);
 const expressHandlebars = require("express-handlebars");
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3200;
 
 const db = require(`./models`);
 
@@ -18,8 +18,6 @@ app.engine(
   "handlebars",
   expressHandlebars({ defaultLayout: "main" }) // the default layouts is "views/layouts" so we can omit that option
 );
-
-
 
 app.set("view engine", "handlebars");
 
