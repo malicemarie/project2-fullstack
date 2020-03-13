@@ -35,7 +35,7 @@ $(document).ready(() => {
       url: "/api/recipes"
     }).then(() => {
       console.log("recipe Submitted successfully!");
-      window.location.href = `/viewall`;
+      //   window.location.href = `/viewall`;
     });
   }
 
