@@ -9,7 +9,7 @@ module.exports = app => {
   });
 
   app.get(`/viewall`, async (req, res) => {
-    let allRecipes = await db.Recipe.findAll({});
+    let allRecipes = await db.recipe.findAll({});
     console.log("********************");
     console.log(allRecipes);
     console.log("********************");

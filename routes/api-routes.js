@@ -5,7 +5,7 @@ const db = require(`../models`);
 module.exports = app => {
   // GET route for getting all of the recipes
   app.get(`/viewall`, async (req, res) => {
-    let allRecipes = await db.Recipe.findAll({});
+    let allRecipes = await db.recipe.findAll({});
     let newRecipes = [];
     allRecipes.forEach(recipe => {
       newRecipes.push({
@@ -21,16 +21,17 @@ module.exports = app => {
 
   // POST route for saving a new recipe
   app.post(`/api/recipes`, (req, res) => {
-    db.Recipe.create({
-      title: req.body.title,
-      ingredientname: req.body.ingredients,
-      category: req.body.category,
-      servingsize: req.body.servingsize
-    })
+    db.recipe
+      .create({
+        title: req.body.title,
+        ingredientname: req.body.ingredients,
+        category: req.body.category,
+        servingsize: req.body.servingsize
+      })
 
-      .then(dbRecipe => {
-        console.log("added new recipe" + dbRecipe);
-        res.json(dbRecipe);
+      .then(dbrecipe => {
+        console.log("added new recipe" + dbrecipe);
+        res.json(dbrecipe);
       })
       .catch(err => {
         console.log("oops nope db error");
@@ -40,29 +41,33 @@ module.exports = app => {
 
   //GET route for getting recipes by Category
   app.get(`/api/recipes/:category`, (req, res) => {
-    db.Recipe.findAll({
-      where: {
-        category: req.params.category
-      }
-    }).then(dbRecipe => {
-      res.json(dbRecipe);
-    });
+    db.recipe
+      .findAll({
+        where: {
+          category: req.params.category
+        }
+      })
+      .then(dbrecipe => {
+        res.json(dbrecipe);
+      });
   });
 
   // DELETE route for deleting recipes.
   app.delete(`/api/recipes/:id`, (req, res) => {
-    db.Recipe.destroy({
-      where: {
-        id: req.params.id
-      }
-    }).then(dbRecipe => {
-      res.json(dbRecipe);
-    });
+    db.recipe
+      .destroy({
+        where: {
+          id: req.params.id
+        }
+      })
+      .then(dbrecipe => {
+        res.json(dbrecipe);
+      });
   });
 
   // PUT route for updating recipes.
   // app.put(`/api/recipes`, (req, res) => {
-  //   db.Recipe.update(
+  //   db.recipe.update(
   //     {
   //       title: req.body.title,
   //       ingredientname: req.body.ingredientname,
@@ -75,8 +80,8 @@ module.exports = app => {
   //       }
   //     }
   //   )
-  //     .then(dbRecipe => {
-  //       res.json(dbRecipe);
+  //     .then(dbrecipe => {
+  //       res.json(dbrecipe);
   //     })
   //     .catch(err => {
   //       res.json(err);

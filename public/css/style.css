@@ -3,9 +3,26 @@ button.submit {
   float: right;
   background-color: #777777;
 }
+/* 
+.row1 {
+  display: flex;
+  justify-content: left;
+  align-items: flex-start;
+} */
 
-button.view-all button.login {
+.row {
+  margin-top: 20px;
+}
+
+.viewallbtn {
   float: left;
+  background-color: white;
+  color: #777777;
+  float: left;
+}
+
+.viewallbtn:hover {
+  color: white;
   background-color: #777777;
 }
 
