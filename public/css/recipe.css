@@ -5,9 +5,9 @@
     rgba(235, 219, 180, 0.7),
     rgba(167, 116, 116, 0.945)
   );
-
   margin: 20px;
 }
+
 .flip-card {
   background-color: transparent;
   width: 300px;
@@ -37,12 +37,12 @@
 }
 
 .flip-card-front {
-  background-image: url("../img/old-paper-2-1189706-639x462.jpg");
+  background-image: url("../css/assets/img/old-paper-2-1189706-639x462.jpg");
   font-family: "Courier New", Courier, monospace;
 }
 
 .flip-card-back {
-  background-image: url("../img/old-paper-2-1189706-639x462.jpg");
+  background-image: url("../css/assets/img/old-paper-2-1189706-639x462.jpg");
   font-family: "Courier New", Courier, monospace;
   transform: rotateY(180deg);
 }
