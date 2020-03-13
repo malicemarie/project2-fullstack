@@ -4,9 +4,18 @@ const db = require(`../models`);
 
 module.exports = app => {
   // GET route for getting all of the recipes
-  app.get(`/api/viewall`, (req, res) => {
-    db.Recipe.findAll({}).then(dbRecipe => {
-      res.json(dbRecipe);
+  app.get(`/viewall`, async (req, res) => {
+    let allRecipes = await db.Recipe.findAll({});
+    let newRecipes = [];
+    allRecipes.forEach(recipe => {
+      newRecipes.push({
+        title: recipe.title,
+        ingredientname: recipe.ingredients,
+        category: recipe.category
+      });
+    });
+    res.render("viewall", {
+      recipe: newRecipes
     });
   });
 
@@ -14,8 +23,9 @@ module.exports = app => {
   app.post(`/api/recipes`, (req, res) => {
     db.Recipe.create({
       title: req.body.title,
-      ingredientname: req.body.ingredientname,
-      category: req.body.category
+      ingredientname: req.body.ingredients,
+      category: req.body.category,
+      servingsize: req.body.servingsize
     })
 
       .then(dbRecipe => {
