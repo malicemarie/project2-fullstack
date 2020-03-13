@@ -34,7 +34,7 @@ module.exports = app => {
         res.json(dbRecipe);
       })
       .catch(err => {
-        console.log("oops nope db error");
+        console.log("oops nope db error", err);
         res.json(err);
       });
   });
