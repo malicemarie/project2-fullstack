@@ -8,13 +8,13 @@
                 Add New Recipe <i class="fas fa-utensils"></i>
             </a>
 
-            {{#each Recipe}}
+            {{!-- {{#each Recipe}}
             <h1>{{title}}</h1>
             <h2>{{ingredientname}}</h2>
             <h3>{{category}}</h3>
             <h4>{{servingsize}}</h4>
-            {{/each}}
-            {{!-- 
+            {{/each}} --}}
+
             {{#each Recipe}}
             <div class="row">
                 <div class="flip-card">
@@ -29,6 +29,7 @@
                                         <h5 class="card-title" style="letter-spacing: inherit;">{{title}}</h5>
                                         <p class="card-text">{{ingredientname}}</p>
                                         <a href="/" class="card-link">{{category}}</a>
+                                        <p class="card-text serving-size">Makes {{servingsize}} servings.</p>
                                     </div>
                                 </div>
                             </div>
@@ -37,7 +38,7 @@
                 </div>
             </div>
         </div>
-        {{/each}} --}}
-        </div>
+        {{/each}}
     </div>
+</div>
 </div>
