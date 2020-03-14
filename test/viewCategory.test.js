@@ -1,6 +1,6 @@
 "use strict";
 
-const ViewCategory = require("../controllers/ViewCategory");
+const ViewCategory = require("../test/ViewCategory");
 
 describe("ViewCategory", () => {
   describe("Initialization", () => {
