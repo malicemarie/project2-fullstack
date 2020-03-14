@@ -9,7 +9,6 @@ $(document).ready(() => {
   //const recipeCard = $(".card-body");
 
   $(cmsForm).on("submit", handleFormSubmit);
-  let recipesId;
 
   function handleFormSubmit(event) {
     event.preventDefault();

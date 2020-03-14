@@ -1,10 +1,33 @@
 button.submit {
+  margin-top: 20px;
   float: right;
   background-color: #777777;
 }
 
-button.view-all button.login {
+.row {
+  margin-top: 20px;
+}
+
+.viewallbtn {
   float: left;
+  background-color: white;
+  color: #777777;
+  float: left;
+}
+
+.view-all {
+  float: left;
+  background-color: white;
+  color: #777777;
+  float: left;
+}
+
+.viewallbtn:hover {
+  color: white;
+  background-color: #777777;
+}
+.view-all:hover {
+  color: white;
   background-color: #777777;
 }
 
@@ -18,6 +41,11 @@ form#cms {
 
 .jumbotron {
   background: rgba(235, 219, 180, 0.7);
+  background-image: linear-gradient(
+    to bottom,
+    rgba(235, 219, 180, 0.7),
+    rgba(167, 116, 116, 0.945)
+  );
   margin: 20px;
 }
 
@@ -27,5 +55,18 @@ body {
 }
 
 .display-4 {
+  font-weight: bold;
+}
+
+.card-link {
+  color: white;
+}
+
+.card-link:hover {
+  color: #777777;
+}
+
+.recipe-title {
+  font-size: 16;
   font-weight: bold;
 }

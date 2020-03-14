@@ -1,5 +1,6 @@
 "use strict";
 
+const db = require("../models");
 module.exports = app => {
   app.get(`/`, (req, res) => {
     // the default layout is already set to "main" in server.js
@@ -7,10 +8,14 @@ module.exports = app => {
     res.render("index");
   });
 
-  app.get(`/recipes`, (req, res) => {
-    // including dummy data so it renders something
+  app.get(`/viewall`, async (req, res) => {
+    let allRecipes = await db.recipe.findAll({});
+    console.log("********************");
+    console.log(allRecipes);
+    console.log("********************");
     res.render("viewall", {
-      recipes: [{ title: "pizza", ingredientname: "cheese", category: "food" }]
+      recipe: allRecipes
+      // recipes: [{ title: "pizza", ingredientname: "cheese", category: "food" }]
     });
   });
 };
