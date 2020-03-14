@@ -33,12 +33,20 @@
   transform: rotateX(180deg);
 }
 
+.card-body {
+  margin-top: 40px;
+}
+
 .flip-card-front,
 .flip-card-back {
   position: absolute;
-  width: 100%;
+  width: 200%;
   height: 100%;
   backface-visibility: hidden;
+}
+
+.flip-card-back {
+  text-indent: 20%;
 }
 
 .flip-card-front {
@@ -56,4 +64,14 @@
   background-image: url("../css/assets/img/old-paper-2-1189706-639x462.jpg");
   font-family: "Old Typewriter2";
   transform: rotateX(180deg);
+}
+
+.ingredient-text {
+  line-height: 0.4;
+  font-size: 12px;
+  text-indent: 40%;
+}
+
+.card-title {
+  margin-bottom: 20px;
 }
