@@ -10,7 +10,7 @@ module.exports = app => {
     allRecipes.forEach(recipe => {
       newRecipes.push({
         title: recipe.title,
-        ingredientname: recipe.ingredientname.split("\n"),
+        ingredientname: recipe.ingredientname.split("\n" || ","),
         category: recipe.category,
         servingsize: recipe.servingsize
       });
