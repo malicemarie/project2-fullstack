@@ -1,6 +1,7 @@
 {
   "development": {
     "username": "root",
+
     "password": "shaboom1",
     "database": "recipes_db",
     "host": "127.0.0.1",
