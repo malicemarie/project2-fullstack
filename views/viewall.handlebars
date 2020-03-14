@@ -1,38 +1,40 @@
-<div class="container">
-    <div class="row">
-        <div class="jumbotron">
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+
             <h1 class="display-4">Recipe Box</h1>
             <hr class="my-4" />
 
-            <a type="add-new" href="/" class="btn view-all btn-lg">
-                Add New Recipe <i class="fas fa-utensils"></i>
-            </a>
-
-            {{!-- {{#each Recipe}}
+        </div>
+        <div class="row">
+            <div class="addnew-recipe-btn"> <a type="add-new" href="/" class="btn view-all btn-lg">
+                    Add New Recipe <i class="fas fa-utensils"></i>
+                </a></div>
+        </div>
+        {{!-- {{#each Recipe}}
             <h1>{{title}}</h1>
             <h2>{{ingredientname}}</h2>
             <h3>{{category}}</h3>
             <h4>{{servingsize}}</h4>
             {{/each}} --}}
 
-            {{#each Recipe}}
-            <div class="row">
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            front card
-                        </div>
-                        <div class="flip-card-back">
-                            <div class="recipe-card">
-                                <div class="recipe-card" style="width: 18rem;">
-                                    <div class="card-body">
-                                        <h5 class="card-title" style="letter-spacing: inherit;">{{title}}</h5>
-                                        {{#each ingredientname}}
-                                        <p class="card-text">{{this}}</p>
-                                        {{/each}}
-                                        <a href="/" class="card-link">{{category}}</a>
-                                        <p class="card-text serving-size">Makes {{servingsize}} servings.</p>
-                                    </div>
+        {{#each Recipe}}
+        <div class="row">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <div class="card-front-title">{{title}}</div>
+                    </div>
+                    <div class="flip-card-back">
+                        <div class="recipe-card">
+                            <div class="recipe-card" style="width: 18rem;">
+                                <div class="card-body">
+                                    <h5 class="card-title" style="letter-spacing: inherit;">{{title}}</h5>
+                                    {{#each ingredientname}}
+                                    <p class="card-text">{{this}}</p>
+                                    {{/each}}
+                                    <a href="/" class="card-link">{{category}}</a>
+                                    <p class="card-text serving-size">Makes {{servingsize}} servings.</p>
                                 </div>
                             </div>
                         </div>

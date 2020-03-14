@@ -11,7 +11,6 @@ module.exports = app => {
   app.get(`/viewall`, async (req, res) => {
     let allRecipes = await db.Recipe.findAll({});
     let santizedRecipes = handlebarshelper.sanitizeRecipes(allRecipes);
-    console.log(sanitizedRecipes);
 
     res.render("viewall", {
       Recipe: santizedRecipes

@@ -15,7 +15,6 @@ module.exports = app => {
         servingsize: recipe.servingsize
       });
     });
-    console.log(allRecipes);
     res.render("viewall", {
       Recipe: newRecipes
     });

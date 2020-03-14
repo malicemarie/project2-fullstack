@@ -7,8 +7,8 @@
   background: rgba(235, 219, 180, 0.7);
   background-image: linear-gradient(
     to bottom,
-    rgba(235, 219, 180, 0.7),
-    rgba(167, 116, 116, 0.945)
+    rgba(235, 219, 180, 0.5),
+    rgba(167, 116, 116, 0.7)
   );
   margin: 20px;
 }
@@ -24,7 +24,7 @@
   position: relative;
   width: 100%;
   height: 100%;
-  text-align: center;
+  text-align: left;
   transition: transform 0.6s;
   transform-style: preserve-3d;
 }
@@ -44,6 +44,12 @@
 .flip-card-front {
   background-image: url("../css/assets/img/old-paper-2-1189706-639x462.jpg");
   font-family: "Old Typewriter2";
+}
+
+.card-front-title {
+  text-align: center;
+  font-size: 20px;
+  padding-top: 40px;
 }
 
 .flip-card-back {

@@ -1,5 +1,4 @@
 button.submit {
-
   margin-top: 20px;
 
   background-color: #777777;
@@ -77,11 +76,11 @@ body {
 }
 
 .card-link {
-  color: white;
+  color: #777777;
 }
 
 .card-link:hover {
-  color: #777777;
+  color: white;
 }
 
 .recipe-title {
