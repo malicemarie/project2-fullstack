@@ -8,9 +8,6 @@ module.exports = app => {
 
   app.get(`/viewall`, async (req, res) => {
     let allRecipes = await db.Recipe.findAll({});
-    console.log("********************");
-    console.log(allRecipes);
-    console.log("********************");
     res.render("viewall", {
       allRecipes
     });
