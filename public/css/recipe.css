@@ -3,13 +3,14 @@
   src: url("../css/assets/font/OldTypewriter2.ttf");
 }
 
+body {
+  background-image: url("../css/assets/img/xv.png");
+}
+
 .jumbotron {
-  background: rgba(235, 219, 180, 0.7);
-  background-image: linear-gradient(
-    to bottom,
-    rgba(235, 219, 180, 0.5),
-    rgba(167, 116, 116, 0.7)
-  );
+  /* background: rgba(235, 219, 180, 0.7); */
+  background-image: url("../css/assets/img/cutting-board.jpg");
+
   margin: 20px;
 }
 
