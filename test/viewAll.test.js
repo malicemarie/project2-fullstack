@@ -1,6 +1,6 @@
 "use strict";
 
-const ViewAll = require("../controllers/ViewAll");
+const ViewAll = require("../test/ViewAll");
 
 describe("ViewAll", () => {
   describe("Initialization", () => {
