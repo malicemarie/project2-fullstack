@@ -35,6 +35,7 @@ When you add a recie choose a category so you can sort it later.
 -express
 -express handlebars
 -bootstrap
+-font awesome
 -sequelize
 -MySQL
 

@@ -10,13 +10,13 @@ module.exports = app => {
     allRecipes.forEach(recipe => {
       newRecipes.push({
         title: recipe.title,
-        ingredientname: recipe.ingredients,
+        ingredientname: recipe.ingredientname.split("\n"),
         category: recipe.category,
         servingsize: recipe.servingsize
       });
     });
     res.render("viewall", {
-      recipe: newRecipes
+      Recipe: newRecipes
     });
   });
 

@@ -1,5 +1,4 @@
 button.submit {
-
   margin-top: 20px;
 
   background-color: #777777;
@@ -31,6 +30,18 @@ button.submit:active {
   background-color: white;
   color: #777777;
   float: left;
+}
+
+.delete-recipe-btn {
+  float: right;
+  background-color: white;
+  color: #777777;
+  float: left;
+}
+
+.delete-recipe-btn:hover {
+  color: white;
+  background-color: #777777;
 }
 
 .view-all {
@@ -77,11 +88,12 @@ body {
 }
 
 .card-link {
-  color: white;
+  text-align: end;
+  color: #777777;
 }
 
 .card-link:hover {
-  color: #777777;
+  color: white;
 }
 
 .recipe-title {
