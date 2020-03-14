@@ -1,6 +1,23 @@
 button.submit {
-  float: right;
+  /* float: right; */
   background-color: #777777;
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: black;
+  background-color: white;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+button.submit:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 
 button.view-all button.login {
@@ -27,7 +44,7 @@ form#cms {
 }
 
 body {
-  background-image: url("../img/xv.png");
+  background-image: url("../css/assets/img/xv.png");
   font-family: "Courier New", Courier, monospace;
 }
 
