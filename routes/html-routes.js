@@ -1,6 +1,8 @@
 "use strict";
 
 const db = require("../models");
+const handlebarshelper = require("../helper/hbshelper");
+
 module.exports = app => {
   app.get(`/`, (req, res) => {
     res.render("index");
@@ -8,8 +10,11 @@ module.exports = app => {
 
   app.get(`/viewall`, async (req, res) => {
     let allRecipes = await db.Recipe.findAll({});
+    let santizedRecipes = handlebarshelper.sanitizeRecipes(allRecipes);
+    console.log(sanitizedRecipes);
+
     res.render("viewall", {
-      allRecipes
+      Recipe: santizedRecipes
     });
   });
 };
