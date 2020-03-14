@@ -12,9 +12,10 @@
                     <div class="recipe-card" style="width: 18rem;">
                         <div class="card-body">
                             <h5 class="card-title recipe-title">{{title}}</h5>
-                            {{#each ingredientname}}
-                            <ul class="card-text ingredient-list">{{ingredientname}}</ul>
+                            {{#each ingredientname }}
+                            <ul class="card-text ingredient-list">{{splitIngredient ingredientname}}</ul>
                             {{/each}}
+                            <p class="servingsize recipe-servingsize"> Serving Size: {{servingsize}}</p>
                             <a href="/viewall" class="card-link">{{category}}</a>
                         </div>
                     </div>
