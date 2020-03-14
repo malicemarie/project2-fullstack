@@ -5,7 +5,7 @@ CREATE DATABASE recipes_db;
 
 USE recipes_db;
 
-CREATE TABLE recipes (
+CREATE TABLE Recipes (
     id INT NOT NULL AUTO_INCREMENT,
     title VARCHAR(255) NOT NULL,
     ingredientname VARCHAR(500) NOT NULL,
@@ -13,4 +13,6 @@ CREATE TABLE recipes (
     servingsize INT,
     PRIMARY KEY (id) 
 );
+
+INSERT INTO Recipes (title, ingredientname, category, servingsize) VALUE ("lemon cookies", "weed", "Lunch", "1"); 
 
