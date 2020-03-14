@@ -4,7 +4,7 @@ const express = require(`express`);
 const expressHandlebars = require("express-handlebars");
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8000;
 
 const db = require(`./models`);
 
@@ -19,8 +19,6 @@ app.engine(
   expressHandlebars({ defaultLayout: "main" }) // the default layouts is "views/layouts" so we can omit that option
 );
 
-
-
 app.set("view engine", "handlebars");
 
 // Static directory
@@ -31,7 +29,7 @@ require(`./routes/api-routes.js`)(app);
 require(`./routes/html-routes.js`)(app);
 
 //start server via sequelize
-db.sequelize.sync({ force: true }).then(() => {
+db.sequelize.sync().then(() => {
   app.listen(PORT, () =>
     console.log(`App listening on http://localhost:${PORT}`)
   );
