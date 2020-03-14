@@ -4,10 +4,17 @@
             <h1 class="display-4">Recipe Box</h1>
             <hr class="my-4" />
 
-            <button type="add-new" href="/recipes" class="btn view-all btn-lg">
+            <a type="add-new" href="/" class="btn view-all btn-lg">
                 Add New Recipe <i class="fas fa-utensils"></i>
-            </button>
+            </a>
 
+            {{#each Recipe}}
+            <h1>{{title}}</h1>
+            <h2>{{ingredientname}}</h2>
+            <h3>{{category}}</h3>
+            <h4>{{servingsize}}</h4>
+            {{/each}}
+            {{!-- 
             {{#each Recipe}}
             <div class="row">
                 <div class="flip-card">
@@ -21,16 +28,16 @@
                                     <div class="card-body">
                                         <h5 class="card-title" style="letter-spacing: inherit;">{{title}}</h5>
                                         <p class="card-text">{{ingredientname}}</p>
-                                        <a href="/recipes/{{category}}" class="card-link">{{category}}</a>
+                                        <a href="/" class="card-link">{{category}}</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
-            {{/each}}
+        </div>
+        {{/each}} --}}
         </div>
     </div>
 </div>

@@ -1,7 +1,8 @@
+-- DONT ACTUALLY USE THIS!! SEQUELIZE WILL DO IT!
+
 DROP DATABASE IF EXISTS recipes_db;
 
 CREATE DATABASE recipes_db;
-
 
 USE recipes_db;
 
