@@ -10,19 +10,14 @@
   },
   "test": {
     "username": "root",
-    "password": "SoccerTime253!",
-    "database": "database_test",
+    "password": "malicemarie1",
+    "database": "recipes_db",
     "host": "127.0.0.1",
     "dialect": "mysql",
     "operatorsAliases": false
   },
   "production": {
     "use_env_variable": "JAWSDB_URL",
-    "username": "zyzwh8mqca5uvs7o",
-    "password": "wkrskp9vvgzottch",
-    "database": "database_production",
-    "host": "etdq12exrvdjisg6.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-    "dialect": "mysql",
-    "operatorsAliases": false
+    "dialect": "mysql"
   }
 }
