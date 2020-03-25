@@ -2,10 +2,10 @@
 
 const express = require(`express`);
 const expressHandlebars = require("express-handlebars");
+const compression = require("compression");
 
 const app = express();
 const PORT = process.env.PORT || 8000;
-
 
 const db = require(`./models`);
 
@@ -14,8 +14,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static(__dirname + "/public"));
 
-//Handlebars
+//Compression
+app.use(compression());
 
+//Handlebars
 app.engine(
   "handlebars",
   expressHandlebars({ defaultLayout: "main" }) // the default layouts is "views/layouts" so we can omit that option
